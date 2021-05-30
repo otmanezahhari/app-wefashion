@@ -1,0 +1,271 @@
+
+/*----------- Global Style -----------------*/
+
+
+*,*::after,*::before{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+h1,ul,li,a{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul{
+  list-style: none;
+}
+
+
+
+.logo{
+  color: #66EB9A;
+  margin-right: 40px;
+}
+
+.nav-link{
+  font-size: 1.5em;
+  line-height: 18px;
+}
+
+.nav-link{
+  margin-right:40px;
+}
+
+.product-number{
+  text-align: right;
+}
+img{
+  width: 100%;
+  height: 100%;
+  transform: scale(0.8);
+  margin-bottom: 20px;
+  transition: all ease-in .3s;
+}
+
+img:hover{
+    transform: scale(0.9);
+}
+
+footer,
+header{
+    background-color: #efef;
+}
+
+
+/*------  Helpers Classes ---------*/
+
+.container{
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.padding-35{
+  padding: 35px 0;
+}
+
+
+.margin-top-70{
+  margin-top: 70px;
+}
+
+.img-box{
+  width: 350px;
+  height: 500px;
+  margin: auto;
+}
+
+.justify-content-between{
+  justify-content: space-between;
+}
+
+.text-align-center{
+  text-align: center;
+}
+
+/*---- home page Style ----*/
+
+.product-items{
+  margin-bottom: 50px;
+}
+
+.product-number{
+    font-size: 28px;
+}
+
+.product-number span{
+    color: #66EB9A;
+}
+
+.btn{
+    padding: 10px 28px;
+    display: block;
+    margin: 20px 0;
+    border-radius: 32px;
+    background-color: #66EB9A;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px  2px 20px -8px black;
+}
+
+/*Header */
+
+
+/* Footer  style ----*/
+
+.footer-grp .footer-links li a{
+  margin-bottom: 10px;
+}
+
+.footer-grp .footer-links li a i{
+  font-size: 20px;
+}
+
+.footer-grp .footer-links img{
+  width: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/*--- Login Page style ----- */
+
+/*------  Helpers Classes ---------*/
+
+.container{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .flex{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .align-items-center{
+    align-items: center;
+  }
+
+  .padding-35{
+    padding: 35px 0;
+  }
+
+
+  .margin-top-70{
+    margin-top: 70px;
+  }
+
+  .img-box{
+    width: 350px;
+  }
+
+  .justify-content-between{
+    justify-content: space-between;
+  }
+
+  .text-align-center{
+    text-align: center;
+  }
+
+  .align-items-center{
+      align-items: center;
+  }
+
+  /*---- home page Style ----*/
+  .list-products{
+      position: relative;
+  }
+
+  .product-items{
+    margin-bottom: 50px;
+    flex: 1 1 33.33%;
+    width: 33.33%;
+    max-width: 33.33%;
+  }
+
+
+  /* Footer  style ----*/
+
+  .footer-grp .footer-links li a{
+    margin-bottom: 10px;
+  }
+
+  .footer-grp .footer-links li a i{
+    font-size: 20px;
+  }
+
+  .footer-grp .footer-links img{
+    width: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+  /* ---- Form Syle ---- */
+
+.text-red-600{
+    color: red;
+}
+
+
+/* pagination */
+
+.pagination{
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.pagination .page-item{
+    padding: 10px 15px;
+    margin: 10px;
+    background-color: royalblue;
+}
+
+/*Description */
+
+.product-left-description,
+.box-description-img{
+    flex: 1 1 50%;
+    width: 50%;
+    max-width: 550px;
+}
+
+
+/*---Tableaux ----*/
+
+tbody tr td,
+thead tr th{
+    width: 150px;
+    height: 40px;
+    border: 1px solid black;
+    text-align: center;
+}
