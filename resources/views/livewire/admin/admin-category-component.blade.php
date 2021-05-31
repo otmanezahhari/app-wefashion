@@ -25,6 +25,12 @@ nav .hidden{
                          </div>
                     </div>
 
+                    @if(Session::has('message'))
+                        <div class="allert alert-success">
+                            {{Session::get('message')}}
+                        </div>
+                    @endif
+
                     <div class="panel-body-category">
                         <table class="table table-striped">
                             <thead>
@@ -41,7 +47,7 @@ nav .hidden{
                                         <td>{{$category->name}}</td>
                                         <td style="justify-content: center;">
                                             <a style="display: inline-block;" href="{{route('admin.editcategory',['category_slug'=>$category->slug])}}"><img  src="{{asset('./assets/images/edit-solid.svg')}}" alt="" style="width:30px;cursor:pointer;margin:0px"></a>
-                                            <a style="display: inline-block;margin: 20px 0;"><img  src="{{asset('./assets/images/user-times-solid.svg')}}" style="width:30px;cursor:pointer;margin:0px"></a>
+                                            <a style="display: inline-block;margin: 20px 0;" href="#" wire:click.prevent ="deleteCategory({{$category->id}})"><img  src="{{asset('./assets/images/user-times-solid.svg')}}" style="width:30px;cursor:pointer;margin:0px"></a>
                                         </td>
                                     </tr>
 
