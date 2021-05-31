@@ -10,7 +10,7 @@ class HommeComponent extends Component
     use WithPagination;
     public function render()
     {
-        $products = Product::paginate(6);
+        $products = Product::where('category_id', '1', 7)->paginate(6);
         return view('livewire.homme-component', ["products"=> $products ])->layout('layouts.base');
     }
 }

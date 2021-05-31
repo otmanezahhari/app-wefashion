@@ -208,6 +208,25 @@ header{
     width: 33.33%;
     max-width: 33.33%;
   }
+  .product-number{
+    text-align: center;
+  }
+
+  .product-number p{
+      font-size: 34px;
+      position: relative;
+      display: inline-block;
+  }
+
+  .product-number p::before{
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    bottom: -15px;
+    left: 15px;
+    background-color: #66EB9A;
+  }
 
 
   /* Footer  style ----*/
@@ -248,7 +267,7 @@ header{
 .pagination .page-item{
     padding: 10px 15px;
     margin: 10px;
-    background-color: royalblue;
+    background-color: #66EB9A;
 }
 
 /*Description */

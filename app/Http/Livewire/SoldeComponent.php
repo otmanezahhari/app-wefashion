@@ -11,7 +11,7 @@ class SoldeComponent extends Component
     use WithPagination;
     public function render()
     {
-        $products = Product::paginate(6);
+        $products = Product::where('product_status', 'ensolde', 7)->paginate(6);
         return view('livewire.solde-component', ["products"=> $products ])->layout("layouts.base");
     }
 }

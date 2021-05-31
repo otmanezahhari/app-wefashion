@@ -11,7 +11,7 @@ class FemmeComponent extends Component
     use WithPagination;
     public function render()
     {
-        $products = Product::paginate(6);
+        $products = Product::where('category_id', '2', 7)->paginate(6);
         return view('livewire.femme-component', ["products"=> $products ])->layout('layouts.base');
     }
 }
