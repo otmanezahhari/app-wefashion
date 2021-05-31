@@ -289,3 +289,67 @@ thead tr th{
     border: 1px solid black;
     text-align: center;
 }
+
+
+/*login-page*/
+
+.register-form,
+.login-form{
+    /* text-align: center; */
+    padding: 50px;
+    margin: auto;
+}
+
+.register-form .wrap-title,
+.login-form .wrap-title{
+    border: none;
+    text-align: center;
+}
+
+.register-form .wrap-title h3,
+.login-form .wrap-title h3{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.register-form .wrap-title h3::before,
+.login-form .wrap-title h3::before{
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    bottom: -15px;
+    left: 15px;
+    background-color: #66EB9A;
+}
+
+.wrap-input{
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.wrap-input >label{
+    flex: 1 1 20%;
+    width: 20%;
+    max-width: 20%;
+}
+
+.wrap-input > input{
+    flex: 1 1 80%;
+    width: 80%;
+    max-width: 80%;
+    padding: 20px;
+    border: 2px solid #66EB9A;
+}
+
+.wrap-input label.remember-field{
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.wrap-input  a.link-function{
+    width: 200px;
+}
