@@ -5,6 +5,7 @@ use App\Http\Livewire\Admin\AdminAddProductComponent;
 use App\Http\Livewire\Admin\AdminCategoryComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminEditCategoryComponent;
+use App\Http\Livewire\Admin\AdminEditProductCompnent;
 use App\Http\Livewire\Admin\AdminProductComponent;
 use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\FemmeComponent;
@@ -63,5 +64,6 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
 
     Route::get('/admin/products',AdminProductComponent::class)->name('admin.products');
     Route::get('admin/product/add',AdminAddProductComponent::class)->name('admin.addproduct');
+    Route::get('/admin/product/edit/{product_slug}',AdminEditProductCompnent::class)->name('admin.editproduct');
 
 });

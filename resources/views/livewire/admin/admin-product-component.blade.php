@@ -16,6 +16,12 @@
                     </div>
 
                     <div class="panel-product-body">
+
+                    @if(Session::has('message'))
+                        <div class="alert-success">
+                            {{Session::get('message')}}
+                        </div>
+                    @endif
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -49,8 +55,8 @@
                                         <td>{{$product->created_at}}</td>
 
                                         <td style="justify-content: center;">
-                                            <a style="display: inline-block;" href="#"><img  src="{{asset('./assets/images/edit-solid.svg')}}" alt="" style="width:30px;cursor:pointer;margin:0px"></a>
-                                            <a style="display: inline-block;margin: 20px 0;" href="#" ><img  src="{{asset('./assets/images/user-times-solid.svg')}}" style="width:30px;cursor:pointer;margin:0px"></a>
+                                            <a style="display: inline-block;" href="{{route('admin.editproduct',['product_slug'=>$product->slug])}}"><img  src="{{asset('./assets/images/edit-solid.svg')}}" alt="" style="width:30px;cursor:pointer;margin:0px"></a>
+                                            <a style="display: inline-block;margin: 20px 0;" wire:click.prevent="deleteProduct({{$product->id}})" ><img  src="{{asset('./assets/images/user-times-solid.svg')}}" style="width:30px;cursor:pointer;margin:0px"></a>
                                         </td>
 
 
