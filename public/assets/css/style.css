@@ -240,8 +240,9 @@ header{
 .pagination{
     display: flex;
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -30px;
 }
 
 .pagination .page-item{

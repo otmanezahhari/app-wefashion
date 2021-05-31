@@ -21,13 +21,13 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->decimal('regular_price');
             $table->decimal("sale_price")->nullable();
-            $table->enum('size',['XS','S','M','L','XL']);
             $table->enum('stock_status',['instock','outofstock']);
             $table->unsignedBigInteger('quantity')->default(10);
             $table->string('image')->nullable();
             $table->text('images')->nullable();
             $table->enum('product_status',['ensolde','standard']);
-            $table->enum('product_category',['men','women']);
+            $table->enum('size',['XS','S','M','L','XL']);
+            $table->enum('product_published',['published','unpublished']);
             $table->bigInteger('category_id')->unsigned()->nullable();
             $table->timestamps();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');

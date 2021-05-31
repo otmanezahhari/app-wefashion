@@ -131,7 +131,7 @@
         {{$slot}}
 
 
-  <footer>
+  <footer style="margin-top: 60px;">
 
     <div class="footer-content flex container justify-content-between padding-35">
       <div class="footer-grp">

@@ -32,11 +32,11 @@ class ProductFactory extends Factory
             'regular_price' => $this->faker->numberBetween(10,500),
             "sale_price" => $this->faker->numberBetween(10,500),
             "stock_status" => 'instock',
-            "product_status"=> 'standard',
-            "product_category"=>"men",
-            "size" => "M",
             "quantity" => $this->faker->numberBetween(100,200),
-            "image" => 'digital_'.$this->faker->unique()->numberBetween(1,22).'.jpg',
+            "image" => 'digital_'.$this->faker->unique()->numberBetween(1,12).'.jpg',
+            "product_status"=> 'standard',
+            "size" => "M",
+            "product_published" => "published",
             "category_id" => $this->faker->numberBetween(1,2),
         ];
     }

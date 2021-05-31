@@ -26,8 +26,8 @@ class CategoryFactory extends Factory
         $slug = Str::slug($category_name);
         return [
             //
-            'name' => $category_name,
-            'slug' => $slug
+            'name'=>$category_name,
+            'slug'=>$slug
         ];
     }
 }

@@ -11,7 +11,7 @@ class HomeComponent extends Component
     use WithPagination;
     public function render()
     {
-        $products = Product::paginate(6);
+        $products = Product::where('product_published', 'published', 7)->paginate(6);
         return view('livewire.home-component', ["products"=> $products ])->layout('layouts.base');
     }
 }
