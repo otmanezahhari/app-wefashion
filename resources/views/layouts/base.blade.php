@@ -13,110 +13,96 @@
 
 
 <body>
+    <header>
+        @if(Route::has('login'))
+                @auth
+                @if(Auth::user()->utype === 'ADM')
+                    <!-- //Admin -->
 
-@if(Route::has('login'))
-        @auth
-          @if(Auth::user()->utype === 'ADM')
-            <!-- //Admin -->
 
-            <div class="top-nav"></div>
-            <header>
-                <div class="top-nav flex container  justify-content-between">
+                        <div class="top-nav flex container  justify-content-between padding-35" style="border-bottom: 1px solid black;">
 
-                    <a href="/" class="logo">
-                        <h1>My Account ({{Auth::user()->name}})</h1>
-                    </a>
-                    <ul style="flex:1 1 40%;padding-top:10px;" class="navigation-link flex align-items-center justify-content-between">
-                        <li>
-                            <a href="{{route('admin.categories')}}">Categories</a>
-                        </li>
-                        <li>
-                            <a href="{{route('admin.products')}}">All Product</a>
-                        </li>
-                        <li>
-                            <a href="{{route('logout')}}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >
-                                Se déconnecter
+                            <a href="/" class="dashboard">
+                                <h1>My Account ({{Auth::user()->name}})</h1>
                             </a>
-                        </li>
-                        <form id="logout-form" method="POST" action = "{{route('logout')}}">
-                            @csrf
+                            <ul class="navigation-link-dashboard flex align-items-center justify-content-between">
+                                <li>
+                                    <a href="{{route('admin.categories')}}">Categories</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('admin.products')}}">All Product</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('logout')}}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >
+                                        Se déconnecter
+                                    </a>
+                                </li>
+                                <form id="logout-form" method="POST" action = "{{route('logout')}}">
+                                    @csrf
 
-                        </form>
+                                </form>
 
 
-                    </ul>
+                            </ul>
 
-                </div>
-                <div class="container flex align-items-center padding-35 justify-content-between">
-                    <div class="navigation flex align-items-center">
-                        <a href="/" class="logo">
-                        <h1>We Fashion</h1>
+                        </div>
+
+
+                @else
+
+                <!-- //Normal User -->
+                    <div class="top-nav flex container  justify-content-between padding-35" style="border-bottom: 1px solid black;">
+
+                        <a href="/" class="dashboard">
+                            <h1>My Account({{Auth::user()->name}})</h1>
                         </a>
-                        <nav>
-                        <ul class="navigation-link flex align-items-center">
-                            <li><a href="/solde" class="nav-link">Solde</a></li>
-                            <li><a href="/homme" class="nav-link">Homme</a></li>
-                            <li><a href="/femme" class="nav-link">Femme</a></li>
+                        <ul class="navigation-link-dashboard  flex align-items-center" style = "display: flex;place-content: flex-end;">
+
+                            <li>
+                                    <a href="{{route('logout')}}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >
+                                        Se déconnecter
+                                    </a>
+                            </li>
+                            <form id="logout-form" method="POST" action = "{{route('logout')}}">
+                                @csrf
+
+                            </form>
                         </ul>
-                        </nav>
+
                     </div>
 
-                </div>
+                @endif
 
+            @else
+                    <div class="container flex align-items-center padding-35 justify-content-between" style="border-bottom: 1px solid black;">
+                        <div class="navigation flex align-items-center">
+                        </div>
+                        <div class="admin-login flex "  >
+                            <a href="{{route('login')}}" class="nav-link">Se connecter</a>
+                            <a href="{{route('register')}}" class="nav-link">S'enregitrer</a>
+                        </div>
 
-            </header>
+                    </div>
 
-          @else
-
-          <!-- //Normal User -->
-              <nav>
-                <a href="/" class="logo">
-                    <h1>My Account({{Auth::user()->name}})</h1>
-                </a>
-                <ul class="navigation-link flex align-items-center">
-                    <li><a href="{{route('user.dashboard')}}" class="nav-link">Dashboard</a></li>
-                    <li>
-                            <a href="{{route('logout')}}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" >
-                                Se déconnecter
-                            </a>
-                    </li>
-                    <form id="logout-form" method="POST" action = "{{route('logout')}}">
-                        @csrf
-
-                    </form>
-                </ul>
-
-              </nav>
-
-          @endif
-
-        @else
-        <header>
-            <div class="container flex align-items-center padding-35 justify-content-between">
-                <div class="navigation flex align-items-center">
-                    <a href="/" class="logo">
-                    <h1>We Fashion</h1>
-                    </a>
-                    <nav>
-                    <ul class="navigation-link flex align-items-center">
-                        <li><a href="/solde" class="nav-link">Solde</a></li>
-                        <li><a href="/homme" class="nav-link">Homme</a></li>
-                        <li><a href="/femme" class="nav-link">Femme</a></li>
-                    </ul>
-                    </nav>
-                </div>
-                <div class="admin-login flex">
-                    <a href="{{route('login')}}" class="nav-link">Se connecter</a>
-                    <a href="{{route('register')}}" class="nav-link">S'enregitrer</a>
-                </div>
-
-            </div>
-
-        </header>
+            @endif
 
         @endif
+        <div class="container flex align-items-center padding-35 justify-content-between">
+            <div class="navigation flex align-items-center">
+                <a href="/" class="logo">
+                <h1>We Fashion</h1>
+                </a>
+                <nav>
+                <ul class="navigation-link flex align-items-center">
+                    <li><a href="/solde" class="nav-link">Solde</a></li>
+                    <li><a href="/homme" class="nav-link">Homme</a></li>
+                    <li><a href="/femme" class="nav-link">Femme</a></li>
+                </ul>
+                </nav>
+            </div>
 
-      @endif
+        </div>
+    </header>
 
 
 

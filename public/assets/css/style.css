@@ -353,3 +353,17 @@ thead tr th{
 .wrap-input  a.link-function{
     width: 200px;
 }
+
+.top-nav .dashboard{
+    flex: 1 1 60%;
+    width: 60%;
+    max-width: 60%;
+    color: #66EB9A;
+}
+
+.top-nav .navigation-link-dashboard{
+    font-weight: bold;
+    font-size: 18px;
+    flex: 1 1 40%;
+    align-items: center;
+}
