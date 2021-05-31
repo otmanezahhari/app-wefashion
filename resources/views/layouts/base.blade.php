@@ -148,6 +148,6 @@
       </div>
     </div>
   </footer>
-
+  @livewireScripts
 </body>
 </html>
