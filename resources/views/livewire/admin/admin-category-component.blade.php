@@ -39,9 +39,9 @@ nav .hidden{
                                     <tr>
                                         <td>{{$category->id}}</td>
                                         <td>{{$category->name}}</td>
-                                        <td class="flex" style="justify-content: center;">
-                                            <img  src="{{asset('./assets/images/edit-solid.svg')}}" alt="" style="width:30px;cursor:pointer;margin-right:5px"></a></li>
-                                            <img  src="{{asset('./assets/images/user-times-solid.svg')}}" style="width:30px;cursor:pointer"></a></li>
+                                        <td style="justify-content: center;">
+                                            <a style="display: inline-block;" href="{{route('admin.editcategory',['category_slug'=>$category->slug])}}"><img  src="{{asset('./assets/images/edit-solid.svg')}}" alt="" style="width:30px;cursor:pointer;margin:0px"></a>
+                                            <a style="display: inline-block;margin: 20px 0;"><img  src="{{asset('./assets/images/user-times-solid.svg')}}" style="width:30px;cursor:pointer;margin:0px"></a>
                                         </td>
                                     </tr>
 
