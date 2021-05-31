@@ -26,21 +26,21 @@
                     <form class="storecategory"  wire:submit.prevent="storeCategory">
                         <div class="form-horizontal">
                             <div class="form-group flex align-items-center">
-                                <label for="" class="col-md-4 control-label">Category Name</label>
+                                <label  class="col-md-4 control-label">Category Name</label>
                                 <div class="col-md-4">
                                     <input type="text" placeholder="Category Name" class="form-control input-md" wire:model="name" wire:keyup="generateslug" >
                                 </div>
                             </div>
 
                             <div class="form-group flex align-items-center padding-35">
-                                <label for="" class="col-md-4 control-label">Category Slug</label>
+                                <label  class="col-md-4 control-label">Category Slug</label>
                                 <div class="col-md-4 ">
                                     <input type="text" placeholder="Category Slug" class="form-control input-md" wire:model="slug"   >
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="" class="col-md-4 control-label"></label>
+                                <label  class="col-md-4 control-label"></label>
                                 <div class="col-md-4">
                                     <button type="submit" class="btn">Submit</button>
                                 </div>

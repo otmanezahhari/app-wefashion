@@ -416,11 +416,24 @@ thead tr th{
     flex: 1 1 80%;
     width: 80%;
     max-width: 80%;
+    margin: 10px 0;
 }
-
+.storecategory .form-group textarea,
 .storecategory .form-group input{
     width: 100%;
-    padding: 20px 0;
+    padding: 20px;
     border: 2px solid #66EB9A;
 }
 
+.storecategory .form-group textarea{
+    height: 120px;
+}
+
+.storecategory .form-group .input-file{
+    border: none;
+    max-width: 40%;
+}
+
+.storecategory .form-group div.select{
+    margin: 0;
+}

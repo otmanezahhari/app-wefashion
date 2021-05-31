@@ -35,16 +35,22 @@
                                 @foreach($products as $product)
                                     <tr>
                                         <td>{{$product->id}}</td>
-                                        <td><img src="{{asset('assets/images/home-page-img')}}/{{$product->image}}" style="width:60px;height:60px"></td>
+                                        <td>
+                                            @if($product->category->name === "men")
+                                                <img src="{{asset('assets/images/hommes')}}/{{$product->image}}" style="width:60px;height:60px">
+                                            @else
+                                                <img src="{{asset('assets/images/femmes')}}/{{$product->image}}" style="width:60px;height:60px">
+                                            @endif
+                                        </td>
                                         <td>{{$product->name}}</td>
                                         <td>{{$product->stock_status}}</td>
                                         <td>{{$product->regular_price}}</td>
                                         <td>{{$product->category->name}}</td>
                                         <td>{{$product->created_at}}</td>
 
-                                        <td class="flex" style="justify-content: center;height: 88px;">
-                                            <img  src="{{asset('./assets/images/edit-solid.svg')}}" alt="" style="width:30px;cursor:pointer;margin-right:5px"></a></li>
-                                            <img  src="{{asset('./assets/images/user-times-solid.svg')}}" style="width:30px;cursor:pointer"></a></li>
+                                        <td style="justify-content: center;">
+                                            <a style="display: inline-block;" href="#"><img  src="{{asset('./assets/images/edit-solid.svg')}}" alt="" style="width:30px;cursor:pointer;margin:0px"></a>
+                                            <a style="display: inline-block;margin: 20px 0;" href="#" ><img  src="{{asset('./assets/images/user-times-solid.svg')}}" style="width:30px;cursor:pointer;margin:0px"></a>
                                         </td>
 
 
