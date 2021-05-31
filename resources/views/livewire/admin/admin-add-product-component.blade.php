@@ -15,7 +15,7 @@
                     </div>
                     <div class="panel-body">
                         @if(Session::has('message'))
-                            <div class="alert alertsuccess" role="alert">
+                            <div class="alert alert-success" role="alert">
                                 {{Session::get('message')}}
                             </div>
                         @endif
