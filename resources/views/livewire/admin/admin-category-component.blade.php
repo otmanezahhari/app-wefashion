@@ -15,7 +15,7 @@ nav .hidden{
                 <div class="panel panel-default">
                     <div class="panel-heading">
                          <div class="flex justify-content-between align-items-center">
-                            <div style="color: royalblue;font-weight:bold">
+                            <div class="admin-table-heading">
                                 All Categories
                             </div>
 
@@ -25,7 +25,7 @@ nav .hidden{
                          </div>
                     </div>
 
-                    <div class="panel-body">
+                    <div class="panel-body-category">
                         <table class="table table-striped">
                             <thead>
                                 <tr>

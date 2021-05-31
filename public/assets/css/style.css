@@ -280,22 +280,12 @@ header{
 }
 
 
-/*---Tableaux ----*/
-
-tbody tr td,
-thead tr th{
-    width: 150px;
-    height: 40px;
-    border: 1px solid black;
-    text-align: center;
-}
 
 
 /*login-page*/
 
 .register-form,
 .login-form{
-    /* text-align: center; */
     padding: 50px;
     margin: auto;
 }
@@ -366,4 +356,42 @@ thead tr th{
     font-size: 18px;
     flex: 1 1 40%;
     align-items: center;
+}
+
+
+/*---Tableaux Admin ----*/
+
+tbody tr td,
+thead tr th{
+    flex: 1 1 33.33%;
+    width: calc(1100px / 3);
+    height: 40px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+.admin-table-heading{
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+
+.admin-table-heading::before{
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 5px;
+    bottom: -15px;
+    background-color: #66EB9A;
+}
+
+.panel-product-body{
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.panel-product-body .table,
+.panel-body-category .table{
+    margin:40px auto;
 }

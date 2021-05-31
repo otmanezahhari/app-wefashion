@@ -5,7 +5,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="flex justify-content-between align-items-center">
-                            <div style="color: royalblue;font-weight:bold">
+                            <div class = "admin-table-heading">
                                 All Categories
                             </div>
 
@@ -15,7 +15,7 @@
                          </div>
                     </div>
 
-                    <div class="pael-body">
+                    <div class="panel-product-body">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -53,7 +53,10 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        {{$products->links()}}
+                        @if (\DB::table('products')->count()>10)
+
+                            {{$products->links('pagination::bootstrap-4')}}
+                        @endif
                     </div>
                 </div>
             </div>
